@@ -17,7 +17,8 @@ conectarDB();
 
 //Configurar CORS
 const whiteList = [
-    process.env.FRONTEND_URL
+    process.env.FRONTEND_URL,
+    'https://uptask.vercel.app'
 ];
 const corsOptions = {
     origin: function (origin, callback) {
