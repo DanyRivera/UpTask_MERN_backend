@@ -54,7 +54,7 @@ import { Server } from "socket.io";
 const io = new Server(servidor, {
     pingTimeout: 6000,
     cors: {
-        origin: process.env.FRONTEND_URL || 'https://jade-gumption-b90cc1.netlify.app/'
+        origin: process.env.FRONTEND_URL || 'https://jade-gumption-b90cc1.netlify.app'
     }
 })
 
