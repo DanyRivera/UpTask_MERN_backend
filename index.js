@@ -17,13 +17,14 @@ conectarDB();
 
 //Configurar CORS
 const whiteList = [
-    process.env.FRONTEND_URL
+    process.env.FRONTEND_URL,
+    'https://uptask.vercel.app/'
 ];
 const corsOptions = {
-    origin: function(origin, callback) {
-    // console.log(origin)
+    origin: function (origin, callback) {
+        // console.log(origin)
 
-        if(whiteList.includes(origin)) {
+        if (whiteList.includes(origin)) {
             //Puede Consultar la API
             callback(null, true);
         } else {
@@ -50,10 +51,10 @@ const servidor = app.listen(PORT, () => {
 //Socket.io
 import { Server } from "socket.io";
 
-const io = new Server(servidor , {
+const io = new Server(servidor, {
     pingTimeout: 6000,
     cors: {
-        origin: process.env.FRONTEND_URL,
+        origin: process.env.FRONTEND_URL
     }
 })
 
