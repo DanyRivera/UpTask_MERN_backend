@@ -19,7 +19,7 @@ conectarDB();
 const whiteList = [
     process.env.FRONTEND_URL,
     'https://uptask.vercel.app',
-    'https://jade-gumption-b90cc1.netlify.app/'
+    'https://jade-gumption-b90cc1.netlify.app'
 ];
 const corsOptions = {
     origin: function (origin, callback) {
