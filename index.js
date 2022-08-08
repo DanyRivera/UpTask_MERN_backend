@@ -17,7 +17,8 @@ conectarDB();
 
 //Configurar CORS
 const whiteList = [
-    process.env.FRONTEND_URL
+    process.env.FRONTEND_URL,
+    'https://jade-gumption-b90cc1.netlify.app'
 ];
 const corsOptions = {
     origin: function (origin, callback) {
@@ -53,7 +54,7 @@ import { Server } from "socket.io";
 const io = new Server(servidor, {
     pingTimeout: 6000,
     cors: {
-        origin: process.env.FRONTEND_URL
+        origin: process.env.FRONTEND_URL || 'https://jade-gumption-b90cc1.netlify.app/'
     }
 })
 
